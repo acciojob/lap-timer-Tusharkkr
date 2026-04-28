@@ -65,14 +65,16 @@ const LapTimer = () => {
 
     return (
         <div>
-            <p>{hour} : {min} : {sec}</p>
+            <div id="root">{hour} : {min} : {sec}</div>
             <button onClick={handleStart}>Start</button>
             <button onClick={handleStop}>Stop</button>
             <button onClick={handleLap}>Lap</button>
             <button onClick={handleReset}>Reset</button>
+            <ul>
             {lap.map((value, index) => (
-                <p key={index}>{value}</p>
+                <li key={index}>{value}</li>
             ))}
+            </ul>
         </div>
     )
 }
